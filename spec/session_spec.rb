@@ -9,9 +9,9 @@ RSpec.describe Session do
     3.times do |i|
       session.push(double("Talk #{i}", desc: "talk no #{i}", length: 30))
     end
-#    puts session
     expect(session.minutes).to eq(90)
     expect(session.can_fit?(double("Final Talk", desc: "Final talk", length: 30))).to be true
     expect(session.can_fit?(double("Final Talk", desc: "Final talk", length: 31))).to be false
+    expect(session.talks.length).to eq(3)
   end
 end
