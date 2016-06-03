@@ -1,5 +1,5 @@
 class Session < Array
-  attr_reader :capacity, :talks
+  attr_reader :capacity, :talks, :start
 
   def initialize(capacity)
     @talks = []
@@ -23,13 +23,10 @@ class Session < Array
     end
   end
 
-  def to_s
-    @talks.to_s
-  end
 
-#  def to_ary
-#    @talks
-#  end
+  def to_ary
+    @talks
+  end
 
 #  def to_a
 #    @talks

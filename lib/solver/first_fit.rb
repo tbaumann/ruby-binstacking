@@ -1,3 +1,10 @@
+# First fit is not a optimal solution in all cases but pretty good for
+# it's simplicity.
+# If this where not a test of my programming skills, I would use a
+# existing binstacking library instead of coding Martello and Toth MTP and co
+# myself
+
+
 module Solver
   class FirstFit
 
