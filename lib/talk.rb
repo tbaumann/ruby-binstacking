@@ -21,7 +21,11 @@ class Talk
       length = Integer($1)
     end
     Talk.new(desc, length)
+    rescue
+      raise TalkParseError
   end
 
   private
+end
+class TalkParseError < StandardError
 end

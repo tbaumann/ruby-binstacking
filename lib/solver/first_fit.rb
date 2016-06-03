@@ -22,6 +22,8 @@ module Solver
     def solve
       @input.sort!(&@sort_by)
 
+      #FIXME count available minutes in sessions and inputs and see if it can even fit instead of actually trying
+
       # get cyclic enumerator
       session_enum = sessions.cycle
 
