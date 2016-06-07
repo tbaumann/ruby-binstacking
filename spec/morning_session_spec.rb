@@ -1,11 +1,12 @@
 require 'session'
+require 'morning_session'
 
-RSpec.describe Session do
+RSpec.describe MorningSession do
   it 'creates a new one' do
     expect(described_class.new(120)).to be_a described_class
   end
   it 'can fit exactly the right length of talks' do
-    session = Session.new(120)
+    session = described_class.new(120)
     3.times do |i|
       session.push(double("Talk #{i}", desc: "talk no #{i}", length: 30))
     end
