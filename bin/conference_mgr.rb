@@ -25,8 +25,8 @@ def print_sessions(sessions)
 end
 
 def add_one_track(sessions)
-  morning   = MorningSession.new(3*60, Time.local(2016,"jan",1,13,0,0))
-  afternoon = AfternoonSession.new(4*60, Time.local(2016,"jan",1,13,0,0))
+  morning   = MorningSession.new(3*60)
+  afternoon = AfternoonSession.new(4*60)
   sessions.push(morning)
   sessions.push(afternoon)
 end
